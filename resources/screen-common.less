@@ -1,0 +1,149 @@
+/* Import the original Cosmos skin styles */
+@import 'mediawiki.skin.variables.less';
+@import 'mediawiki.mixins';
+
+/* Shadowrun color scheme */
+:root {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --accent-color: #ff0066;
+    --secondary-accent: #00ccff;
+    --link-color: #00ccff;
+    --link-hover-color: #ff0066;
+    --header-background: #1a1a1a;
+    --footer-background: #1a1a1a;
+    --border-color: #333333;
+    --button-background: #ff0066;
+    --button-text: #ffffff;
+    --card-background: #1e1e1e;
+}
+
+/* Base styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header styles */
+#mw-header {
+    background-color: var(--header-background);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Content area */
+#mw-content {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.1);
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: var(--link-hover-color);
+        text-decoration: none;
+    }
+}
+
+/* Buttons */
+.mw-ui-button,
+input[type="submit"],
+button {
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+
+    &:hover {
+        background-color: darken(var(--button-background), 10%);
+    }
+}
+
+/* Navigation */
+#mw-navigation {
+    background-color: var(--header-background);
+
+    .nav-link {
+        color: var(--text-color);
+
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
+}
+
+/* Footer */
+#mw-footer {
+    background-color: var(--footer-background);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Ko-fi support section */
+.shadowcosmos-kofi-support {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+
+    a {
+        display: flex;
+        align-items: center;
+        color: var(--text-color);
+        text-decoration: none;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .kofi-button {
+        height: 36px;
+        margin-right: 10px;
+    }
+
+    span {
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
+/* Cyberpunk neon glow effect for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--accent-color);
+    text-shadow: 0 0 5px rgba(255, 0, 102, 0.5);
+}
+
+/* Table styling */
+table.wikitable {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+
+    >tr>th,
+    >*>tr>th {
+        background-color: rgba(255, 0, 102, 0.2);
+        color: var(--text-color);
+    }
+
+    >tr>td,
+    >*>tr>td {
+        border: 1px solid var(--border-color);
+    }
+}
+
+/* Infobox styling */
+.infobox {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.1);
+}
