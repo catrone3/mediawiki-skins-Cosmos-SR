@@ -1,70 +1,51 @@
 /* Mobile-specific styles */
 @media screen and (max-width: 850px) {
-    .sc-header {
+    #sc-header {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .sc-header-logo-container {
+    #sc-header-logo-container {
         margin-bottom: 0.5rem;
     }
 
-    .sc-mobile-menu-toggle {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-    }
-
-    .sc-nav {
-        display: none;
-    }
-
-    .sc-nav.sc-nav-open {
-        display: block;
-    }
-
-    .sc-nav-list {
+    #sc-nav {
         flex-direction: column;
     }
 
-    .sc-nav-item {
+    .sc-nav-element {
         margin-right: 0;
         margin-bottom: 0.5rem;
     }
 
-    .sc-content-container {
+    .sc-nav-element ul {
         flex-direction: column;
     }
 
-    .sc-sidebar {
+    .sc-nav-element li {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    #sc-content-container {
+        flex-direction: column;
+    }
+
+    #sc-sidebar {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid var(--border-color);
     }
 
-    .sc-content {
+    #sc-content {
         padding: 1rem;
     }
 
-    .sc-content-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .sc-content-actions {
-        margin-top: 0.5rem;
-    }
-
-    .sc-footer-content {
+    #sc-footer-content {
         flex-direction: column;
     }
 
-    .sc-footer-links {
-        margin-bottom: 1rem;
-    }
-
-    .sc-kofi-support {
+    #sc-kofi-support {
         flex-direction: column;
         text-align: center;
     }
@@ -80,16 +61,11 @@
         margin: 0 0 1rem 0;
     }
 
-    .sc-search-form {
+    #sc-search-form {
         width: 100%;
     }
 
-    .sc-search-input {
+    #sc-search-input {
         flex: 1;
-    }
-
-    .sc-user-tools {
-        margin-top: 1rem;
-        width: 100%;
     }
 }

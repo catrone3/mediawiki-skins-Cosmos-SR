@@ -27,7 +27,7 @@ body {
 }
 
 /* Header styles */
-.sc-header {
+#sc-header {
     background-color: var(--header-background);
     border-bottom: 1px solid var(--border-color);
     padding: 1rem;
@@ -37,17 +37,17 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.sc-header-logo-container {
+#sc-header-logo-container {
     display: flex;
     align-items: center;
 }
 
-.sc-header-logo {
+#sc-header-logo {
     max-height: 50px;
     margin-right: 1rem;
 }
 
-.sc-site-title {
+#sc-site-title {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--accent-color);
@@ -55,37 +55,37 @@ body {
     margin: 0;
 }
 
-.sc-site-title a {
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
-.sc-site-tagline {
+#sc-site-tagline {
     font-size: 0.9rem;
     color: var(--text-color);
     margin: 0;
 }
 
 /* Navigation */
-.sc-nav {
+#sc-nav {
     background-color: var(--sidebar-background);
     padding: 1rem;
     border-bottom: 1px solid var(--border-color);
-}
-
-.sc-nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
 }
 
-.sc-nav-item {
+.sc-nav-element {
     margin-right: 1rem;
 }
 
-.sc-nav-link {
+.sc-nav-element ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.sc-nav-element li {
+    margin-right: 0.5rem;
+}
+
+.sc-nav-element a {
     color: var(--text-color);
     text-decoration: none;
     padding: 0.5rem;
@@ -93,99 +93,35 @@ body {
     transition: all 0.2s ease;
 }
 
-.sc-nav-link:hover {
+.sc-nav-element a:hover {
     color: var(--accent-color);
     background-color: rgba(255, 0, 102, 0.1);
 }
 
-.sc-nav-link.active {
+.sc-nav-element .selected a {
     color: var(--nav-active);
     background-color: rgba(255, 0, 102, 0.2);
 }
 
 /* Content area */
-.sc-content-container {
+#sc-content-container {
     display: flex;
     min-height: calc(100vh - 200px);
 }
 
-.sc-sidebar {
+#sc-sidebar {
     width: 250px;
     background-color: var(--sidebar-background);
     padding: 1rem;
     border-right: 1px solid var(--border-color);
 }
 
-.sc-sidebar .sc-portlet {
-    margin-bottom: 1.5rem;
-}
-
-.sc-sidebar .sc-portlet h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.sc-sidebar .sc-portlet ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sc-sidebar .sc-portlet li {
-    margin-bottom: 0.5rem;
-}
-
-.sc-sidebar .sc-portlet a {
-    color: var(--text-color);
-    text-decoration: none;
-    display: block;
-    padding: 0.3rem 0;
-    transition: color 0.2s ease;
-}
-
-.sc-sidebar .sc-portlet a:hover {
-    color: var(--accent-color);
-}
-
-.sc-content {
+#sc-content {
     flex: 1;
     background-color: var(--card-background);
     padding: 2rem;
     border: 1px solid var(--border-color);
     box-shadow: 0 0 10px rgba(0, 204, 255, 0.1);
-}
-
-.sc-content-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 1rem;
-}
-
-.sc-content-header h1 {
-    margin: 0;
-}
-
-.sc-content-actions {
-    display: flex;
-}
-
-.sc-action-button {
-    margin-left: 0.5rem;
-    color: var(--link-color);
-    text-decoration: none;
-    padding: 0.3rem 0.6rem;
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease;
-}
-
-.sc-action-button:hover {
-    color: var(--link-hover-color);
-    background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Links */
@@ -220,30 +156,36 @@ button:hover {
 }
 
 /* Footer */
-.sc-footer {
+#sc-footer {
     background-color: var(--footer-background);
     border-top: 1px solid var(--border-color);
     padding: 1rem;
     margin-top: 2rem;
 }
 
-.sc-footer-content {
+#sc-footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.sc-footer-links {
+#sc-footer-links {
     display: flex;
     flex-wrap: wrap;
 }
 
-.sc-footer-link {
-    margin-right: 1rem;
+#sc-footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 2rem 1rem 0;
+}
+
+#sc-footer-links li {
+    margin-bottom: 0.5rem;
 }
 
 /* Ko-fi support section */
-.sc-kofi-support {
+#sc-kofi-support {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,11 +258,11 @@ table.wikitable>*>tr>td {
 }
 
 /* Search form */
-.sc-search-form {
+#sc-search-form {
     display: flex;
 }
 
-.sc-search-input {
+#sc-search-input {
     background-color: rgba(0, 0, 0, 0.3);
     border: 1px solid var(--border-color);
     color: var(--text-color);
@@ -328,7 +270,7 @@ table.wikitable>*>tr>td {
     border-radius: 4px 0 0 4px;
 }
 
-.sc-search-button {
+#sc-search-button {
     background-color: var(--button-background);
     color: var(--button-text);
     border: none;
@@ -356,48 +298,56 @@ table.wikitable>*>tr>td {
     color: var(--secondary-accent);
 }
 
+/* Portals in sidebar */
+.sc-portal {
+    margin-bottom: 1.5rem;
+}
+
+.sc-portal h3 {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.sc-portal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sc-portal-content li {
+    margin-bottom: 0.5rem;
+}
+
 /* User tools */
-.sc-user-tools {
+#sc-personal {
+    margin-left: auto;
+}
+
+#sc-personal ul {
     display: flex;
-    align-items: center;
 }
 
-.sc-user-links {
-    display: flex;
+#sc-personal li {
+    margin-left: 1rem;
 }
 
-.sc-user-link {
-    margin-left: 0.5rem;
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 0.3rem 0.6rem;
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease;
-}
-
-.sc-user-link:hover {
-    color: var(--accent-color);
+/* Code blocks */
+pre,
+code {
     background-color: rgba(0, 0, 0, 0.3);
-}
-
-/* Mobile menu toggle */
-.sc-mobile-menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
+    border: 1px solid var(--border-color);
     padding: 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
 }
 
-.sc-mobile-menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px 0;
-    background-color: var(--text-color);
-    border-radius: 3px;
-    transition: all 0.3s ease;
+/* Blockquotes */
+blockquote {
+    border-left: 3px solid var(--accent-color);
+    padding-left: 1rem;
+    margin-left: 1rem;
+    color: #aaa;
 }
 
 /* Scrollbar */

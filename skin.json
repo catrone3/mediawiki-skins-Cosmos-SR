@@ -11,9 +11,7 @@
         "MediaWiki": ">= 1.35.0"
     },
     "ValidSkinNames": {
-        "shadowcosmos": {
-            "class": "SkinShadowCosmos"
-        }
+        "shadowcosmos": "ShadowCosmos"
     },
     "MessagesDirs": {
         "ShadowCosmos": [
@@ -21,7 +19,7 @@
         ]
     },
     "ResourceModules": {
-        "skins.shadowcosmos": {
+        "skins.shadowcosmos.styles": {
             "class": "ResourceLoaderSkinModule",
             "features": [
                 "normalize",
@@ -31,20 +29,12 @@
                 "logo",
                 "legacy"
             ],
-            "styles": {
-                "resources/libraries/normalize.css": {
-                    "media": "screen"
-                },
-                "resources/screen-common.less": {
-                    "media": "screen"
-                },
-                "resources/screen-desktop.less": {
-                    "media": "screen and (min-width: 851px)"
-                },
-                "resources/screen-mobile.less": {
-                    "media": "screen and (max-width: 850px)"
-                }
-            }
+            "styles": [
+                "resources/libraries/normalize.css",
+                "resources/screen-common.less",
+                "resources/screen-desktop.less",
+                "resources/screen-mobile.less"
+            ]
         },
         "skins.shadowcosmos.js": {
             "scripts": [
@@ -61,7 +51,7 @@
         "remoteSkinPath": "ShadowCosmos"
     },
     "AutoloadClasses": {
-        "SkinShadowCosmos": "includes/SkinShadowCosmos.php",
+        "ShadowCosmos": "includes/ShadowCosmos.php",
         "ShadowCosmosTemplate": "includes/ShadowCosmosTemplate.php"
     },
     "manifest_version": 2
