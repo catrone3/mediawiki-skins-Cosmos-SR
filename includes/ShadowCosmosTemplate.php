@@ -1,5 +1,13 @@
 <?php
 
+namespace MediaWiki\Skins\ShadowCosmos;
+
+use BaseTemplate;
+use Html;
+use Linker;
+use MediaWiki\MediaWikiServices;
+use Sanitizer;
+
 /**
  * BaseTemplate class for ShadowCosmos skin
  *
@@ -176,7 +184,9 @@ class ShadowCosmosTemplate extends BaseTemplate {
 					}
 					
 					if ( $hook !== null ) {
-						Hooks::run( $hook, [ &$this, true ] );
+						// Use MediaWikiServices for hooks in newer versions
+						$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+						$hookContainer->run( $hook, [ &$this, true ] );
 					}
 					?>
 				</ul>
@@ -292,9 +302,6 @@ class ShadowCosmosTemplate extends BaseTemplate {
 					break;
 				default:
 					// Render a custom navigation element
-					// This is mainly for things like the Watch/Unwatch tab
-					// which is part of the actions navigation but needs to
-					// be custom rendered.
 					?>
 					<div id="sc-<?php echo $name; ?>" class="sc-nav-element">
 						<?php echo $element; ?>

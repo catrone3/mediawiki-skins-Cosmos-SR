@@ -11,7 +11,20 @@
         "MediaWiki": ">= 1.35.0"
     },
     "ValidSkinNames": {
-        "shadowcosmos": "ShadowCosmos"
+        "shadowcosmos": {
+            "class": "SkinShadowCosmos",
+            "args": [
+                {
+                    "name": "shadowcosmos",
+                    "styles": [
+                        "skins.shadowcosmos.styles"
+                    ],
+                    "scripts": [
+                        "skins.shadowcosmos.js"
+                    ]
+                }
+            ]
+        }
     },
     "MessagesDirs": {
         "ShadowCosmos": [
@@ -50,9 +63,8 @@
         "localBasePath": "",
         "remoteSkinPath": "ShadowCosmos"
     },
-    "AutoloadClasses": {
-        "ShadowCosmos": "includes/ShadowCosmos.php",
-        "ShadowCosmosTemplate": "includes/ShadowCosmosTemplate.php"
+    "AutoloadNamespaces": {
+        "MediaWiki\\Skins\\ShadowCosmos\\": "includes/"
     },
     "manifest_version": 2
 }

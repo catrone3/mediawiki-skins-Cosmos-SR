@@ -1,47 +1,29 @@
-/* Desktop-specific styles */
-@media screen and (min-width: 851px) {
-    #sc-content {
-        margin: 0 1rem;
+/* Desktop styles for ShadowCosmos skin */
+@media screen and (min-width: 769px) {
+    #sc-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
-    /* Add a subtle neon glow to the content area on hover */
-    #sc-content:hover {
-        box-shadow: 0 0 15px rgba(0, 204, 255, 0.2);
-    }
-
-    /* Sticky header */
     #sc-header {
-        position: sticky;
-        top: 0;
-        z-index: 100;
+        padding: 1rem 2rem;
     }
 
-    /* Dropdown menus */
-    .sc-dropdown {
-        position: relative;
+    #sc-content-container {
+        display: flex;
     }
 
-    .sc-dropdown-content {
+    #sc-sidebar {
+        width: 250px;
+        flex-shrink: 0;
+    }
+
+    #sc-content {
+        flex-grow: 1;
+    }
+
+    /* Hide mobile menu toggle on desktop */
+    #sc-mobile-menu-toggle {
         display: none;
-        position: absolute;
-        background-color: var(--sidebar-background);
-        min-width: 160px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        z-index: 1;
-        border: 1px solid var(--border-color);
-        border-radius: 4px;
-    }
-
-    .sc-dropdown:hover .sc-dropdown-content {
-        display: block;
-    }
-
-    .sc-dropdown-item {
-        padding: 0.5rem 1rem;
-        display: block;
-    }
-
-    .sc-dropdown-item:hover {
-        background-color: rgba(255, 0, 102, 0.1);
     }
 }

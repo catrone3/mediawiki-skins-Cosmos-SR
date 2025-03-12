@@ -1,45 +1,52 @@
 /**
  * JavaScript for ShadowCosmos skin
  */
-( function ( $, mw ) {
+;(($, mw) => {
+  // Add a subtle animation to the Ko-fi button
+  $(document).ready(() => {
+    $(".shadowcosmos-kofi-support a").hover(
+      function () {
+        $(this).css("transform", "scale(1.05)")
+      },
+      function () {
+        $(this).css("transform", "scale(1)")
+      },
+    )
+
+    // Add a pulsing effect to the Ko-fi button
+    setInterval(() => {
+      $(".shadowcosmos-kofi-support a")
+        .animate(
+          {
+            opacity: 0.8,
+          },
+          1000,
+        )
+        .animate(
+          {
+            opacity: 1,
+          },
+          1000,
+        )
+    }, 2000)
+  })
+})(jQuery, mediaWiki)
+
+/**
+ * ShadowCosmos skin JavaScript
+ */
+( function ( $ ) {
 	'use strict';
-	
-	// Add a subtle animation to the Ko-fi button
+
+	// Add mobile menu toggle functionality
 	$( function () {
-		$( '.kofi-button' ).hover(
-			function() {
-				$( this ).css( 'transform', 'scale(1.05)' );
-			},
-			function() {
-				$( this ).css( 'transform', 'scale(1)' );
-			}
-		);
+		// This is just a placeholder for any JavaScript functionality you might want to add
+		// For example, you could add a mobile menu toggle here
 		
-		// Add a pulsing effect to the Ko-fi button
-		setInterval( function() {
-			$( '.kofi-button' ).animate( {
-				opacity: 0.8
-			}, 1000 ).animate( {
-				opacity: 1
-			}, 1000 );
-		}, 2000 );
-		
-		// Add neon glow effect to headings on hover
-		$( 'h1, h2, h3, h4, h5, h6' ).hover(
-			function() {
-				$( this ).css( 'text-shadow', '0 0 10px rgba(255, 0, 102, 0.8)' );
-			},
-			function() {
-				$( this ).css( 'text-shadow', '0 0 5px rgba(255, 0, 102, 0.5)' );
-			}
-		);
-		
-		// Add active class to current page in navigation
-		$( '.sc-nav-element a' ).each( function() {
-			if ( window.location.href.indexOf( $( this ).attr( 'href' ) ) !== -1 ) {
-				$( this ).addClass( 'active' );
-			}
-		});
-	});
-	
-})( jQuery, mediaWiki );
+		// Example: Toggle sidebar on mobile
+		$( '#sc-mobile-menu-toggle' ).on( 'click', function () {
+			$( '#sc-sidebar' ).toggleClass( 'sc-sidebar-visible' );
+		} );
+	} );
+
+}( jQuery ) );

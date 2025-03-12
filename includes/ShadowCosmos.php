@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Output\OutputPage;
+
 /**
  * SkinTemplate implementation for ShadowCosmos skin
  *
@@ -41,3 +43,4 @@ class ShadowCosmos extends SkinTemplate {
 		return new ShadowCosmosTemplate();
 	}
 }
+
