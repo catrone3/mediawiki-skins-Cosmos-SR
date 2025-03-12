@@ -12,19 +12,8 @@
     },
     "ValidSkinNames": {
         "shadowcosmos": {
-            "class": "SkinCosmos",
-            "args": [
-                {
-                    "name": "shadowcosmos",
-                    "styles": [
-                        "skins.shadowcosmos"
-                    ],
-                    "scripts": [
-                        "skins.shadowcosmos.js"
-                    ],
-                    "template": "CosmosTemplate"
-                }
-            ]
+            "class": "SkinShadowCosmos",
+            "args": []
         }
     },
     "MessagesDirs": {
@@ -44,7 +33,7 @@
                 "legacy"
             ],
             "styles": {
-                "resources/libraries/normalise.css": {
+                "resources/libraries/normalize.css": {
                     "media": "screen"
                 },
                 "resources/screen-common.less": {
@@ -63,7 +52,8 @@
                 "resources/main.js"
             ],
             "dependencies": [
-                "mediawiki.util"
+                "mediawiki.util",
+                "jquery"
             ]
         }
     },
@@ -72,8 +62,11 @@
         "remoteSkinPath": "ShadowCosmos"
     },
     "AutoloadClasses": {
-        "SkinShadowCosmos": "includes/SkinShadowCosmos.php",
-        "ShadowCosmosTemplate": "includes/ShadowCosmosTemplate.php"
+        "SkinShadowCosmos": "includes/SkinShadowCosmos.php"
     },
+    "AutoloadNamespaces": {
+        "MediaWiki\\Skins\\ShadowCosmos\\": "includes/"
+    },
+    "TemplateDirectory": "templates",
     "manifest_version": 2
 }

@@ -1,12 +1,52 @@
 /* Desktop-specific styles */
 @media screen and (min-width: 851px) {
-    #mw-content {
-        margin: 20px;
-        padding: 20px;
+    .sc-content {
+        margin: 0 1rem;
     }
 
     /* Add a subtle neon glow to the content area on hover */
-    #mw-content:hover {
+    .sc-content:hover {
         box-shadow: 0 0 15px rgba(0, 204, 255, 0.2);
+    }
+
+    /* Two-column layout for certain pages */
+    .ns-0 .sc-content-container {
+        display: flex;
+    }
+
+    /* Sticky header */
+    .sc-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    /* Dropdown menus */
+    .sc-dropdown {
+        position: relative;
+    }
+
+    .sc-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--sidebar-background);
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+    }
+
+    .sc-dropdown:hover .sc-dropdown-content {
+        display: block;
+    }
+
+    .sc-dropdown-item {
+        padding: 0.5rem 1rem;
+        display: block;
+    }
+
+    .sc-dropdown-item:hover {
+        background-color: rgba(255, 0, 102, 0.1);
     }
 }

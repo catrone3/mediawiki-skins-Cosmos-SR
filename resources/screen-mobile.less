@@ -1,21 +1,70 @@
 /* Mobile-specific styles */
 @media screen and (max-width: 850px) {
-    #mw-navigation {
-        background-color: var(--header-background);
+    .sc-header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    #mw-content {
-        margin: 0;
-        padding: 10px;
+    .sc-header-logo-container {
+        margin-bottom: 0.5rem;
     }
 
-    .shadowcosmos-kofi-support {
+    .sc-nav-list {
+        flex-direction: column;
+    }
+
+    .sc-nav-item {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .sc-content-container {
+        flex-direction: column;
+    }
+
+    .sc-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .sc-content {
+        padding: 1rem;
+    }
+
+    .sc-footer-content {
+        flex-direction: column;
+    }
+
+    .sc-footer-links {
+        margin-bottom: 1rem;
+    }
+
+    .sc-kofi-support {
         flex-direction: column;
         text-align: center;
+    }
 
-        .kofi-button {
-            margin-right: 0;
-            margin-bottom: 10px;
-        }
+    .kofi-button img {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .infobox {
+        float: none;
+        max-width: 100%;
+        margin: 0 0 1rem 0;
+    }
+
+    .sc-search-form {
+        width: 100%;
+    }
+
+    .sc-search-input {
+        flex: 1;
+    }
+
+    .sc-user-tools {
+        margin-top: 1rem;
     }
 }
