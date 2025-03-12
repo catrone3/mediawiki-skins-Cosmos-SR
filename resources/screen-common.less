@@ -55,6 +55,11 @@ body {
     margin: 0;
 }
 
+.sc-site-title a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
 .sc-site-tagline {
     font-size: 0.9rem;
     color: var(--text-color);
@@ -111,12 +116,76 @@ body {
     border-right: 1px solid var(--border-color);
 }
 
+.sc-sidebar .sc-portlet {
+    margin-bottom: 1.5rem;
+}
+
+.sc-sidebar .sc-portlet h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.sc-sidebar .sc-portlet ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sc-sidebar .sc-portlet li {
+    margin-bottom: 0.5rem;
+}
+
+.sc-sidebar .sc-portlet a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 0.3rem 0;
+    transition: color 0.2s ease;
+}
+
+.sc-sidebar .sc-portlet a:hover {
+    color: var(--accent-color);
+}
+
 .sc-content {
     flex: 1;
     background-color: var(--card-background);
     padding: 2rem;
     border: 1px solid var(--border-color);
     box-shadow: 0 0 10px rgba(0, 204, 255, 0.1);
+}
+
+.sc-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.sc-content-header h1 {
+    margin: 0;
+}
+
+.sc-content-actions {
+    display: flex;
+}
+
+.sc-action-button {
+    margin-left: 0.5rem;
+    color: var(--link-color);
+    text-decoration: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.sc-action-button:hover {
+    color: var(--link-hover-color);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Links */
@@ -287,55 +356,10 @@ table.wikitable>*>tr>td {
     color: var(--secondary-accent);
 }
 
-/* Tabs (view, edit, history) */
-.vector-menu-tabs {
-    margin-bottom: 1rem;
-}
-
-.vector-menu-tabs ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.vector-menu-tabs li {
-    margin-right: 0.5rem;
-}
-
-.vector-menu-tabs a {
-    display: block;
-    padding: 0.5rem 1rem;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--border-color);
-    border-bottom: none;
-    border-radius: 4px 4px 0 0;
-}
-
-.vector-menu-tabs .selected a {
-    background-color: var(--card-background);
-    border-bottom: 1px solid var(--card-background);
-    margin-bottom: -1px;
-}
-
 /* User tools */
 .sc-user-tools {
     display: flex;
     align-items: center;
-}
-
-.sc-user-avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin-right: 0.5rem;
-    background-color: var(--accent-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
 }
 
 .sc-user-links {
@@ -344,56 +368,36 @@ table.wikitable>*>tr>td {
 
 .sc-user-link {
     margin-left: 0.5rem;
-}
-
-/* Notifications */
-.sc-notifications {
-    position: relative;
-    margin-left: 1rem;
-}
-
-.sc-notifications-icon {
-    cursor: pointer;
     color: var(--text-color);
-}
-
-.sc-notifications-count {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: var(--accent-color);
-    color: white;
-    font-size: 0.7rem;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Special pages */
-.mw-special-Specialpages .mw-specialpages-table {
-    background-color: var(--card-background);
-    border: 1px solid var(--border-color);
-}
-
-/* Code blocks */
-pre,
-code {
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid var(--border-color);
-    padding: 0.5rem;
+    text-decoration: none;
+    padding: 0.3rem 0.6rem;
     border-radius: 4px;
-    font-family: 'Courier New', monospace;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
 }
 
-/* Blockquotes */
-blockquote {
-    border-left: 3px solid var(--accent-color);
-    padding-left: 1rem;
-    margin-left: 1rem;
-    color: #aaa;
+.sc-user-link:hover {
+    color: var(--accent-color);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile menu toggle */
+.sc-mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.sc-mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--text-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
 /* Scrollbar */

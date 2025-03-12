@@ -12,8 +12,7 @@
     },
     "ValidSkinNames": {
         "shadowcosmos": {
-            "class": "SkinShadowCosmos",
-            "args": []
+            "class": "SkinShadowCosmos"
         }
     },
     "MessagesDirs": {
@@ -62,11 +61,8 @@
         "remoteSkinPath": "ShadowCosmos"
     },
     "AutoloadClasses": {
-        "SkinShadowCosmos": "includes/SkinShadowCosmos.php"
+        "SkinShadowCosmos": "includes/SkinShadowCosmos.php",
+        "ShadowCosmosTemplate": "includes/ShadowCosmosTemplate.php"
     },
-    "AutoloadNamespaces": {
-        "MediaWiki\\Skins\\ShadowCosmos\\": "includes/"
-    },
-    "TemplateDirectory": "templates",
     "manifest_version": 2
 }

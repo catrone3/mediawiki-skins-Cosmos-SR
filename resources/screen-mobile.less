@@ -9,6 +9,21 @@
         margin-bottom: 0.5rem;
     }
 
+    .sc-mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .sc-nav {
+        display: none;
+    }
+
+    .sc-nav.sc-nav-open {
+        display: block;
+    }
+
     .sc-nav-list {
         flex-direction: column;
     }
@@ -30,6 +45,15 @@
 
     .sc-content {
         padding: 1rem;
+    }
+
+    .sc-content-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sc-content-actions {
+        margin-top: 0.5rem;
     }
 
     .sc-footer-content {
@@ -66,5 +90,6 @@
 
     .sc-user-tools {
         margin-top: 1rem;
+        width: 100%;
     }
 }
